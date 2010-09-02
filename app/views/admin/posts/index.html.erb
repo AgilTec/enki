@@ -20,15 +20,20 @@
     <% else -%>
       <%= render :partial => 'post', :collection => @posts %>
     <% end -%>
-  </tbody>  
+  </tbody>
 
   <tfoot>
     <% if @posts.total_pages > 1 -%>
       <tr class="pagination">
         <td colspan="5">
+<<<<<<< HEAD
           <%= will_paginate(@posts, :previous_label => t('plugins.will_paginate.previous_label'), :next_label => t('plugins.will_paginate.next_label')) %>
         </td>  
+=======
+          <%= will_paginate(@posts, :previous_label => '« Newer', :next_label => 'Older »') %>
+        </td>
+>>>>>>> master
       </tr>
     <% end -%>
-  </tfoot>  
+  </tfoot>
 </table>
